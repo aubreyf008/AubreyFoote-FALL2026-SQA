@@ -1,0 +1,127 @@
+# Continuous integration for the SQA project (activity 4.c).
+# Runs on every push and pull request, and can be started by hand
+# from the Actions tab ("Run workflow").
+name: SQA CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  fuzz:
+    name: Fuzz 10 methods (fuzz.py)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          cache: pip
+          cache-dependency-path: requirements-sqa.txt
+      - name: Install dependencies
+        run: pip install -r requirements-sqa.txt
+      - name: Run fuzz.py
+        # The seed changes on every run so CI keeps exploring new inputs;
+        # it is printed in the report so any crash can be reproduced locally.
+        run: python -W ignore fuzz.py --iterations 500 --seed ${{ github.run_number }}
+      - name: Publish fuzz report to the run summary
+        if: always()
+        run: cat logs/fuzz_report.md >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: fuzz-logs
+          path: |
+            logs/fuzz.log
+            logs/fuzz_report.md
+            logs/fuzz_crashes.csv
+
+  forensics-scan:
+    name: Run scanner with forensic logging
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          cache: pip
+          cache-dependency-path: requirements-sqa.txt
+      - name: Install dependencies
+        run: pip install -r requirements-sqa.txt
+      - name: Make sure yq is available (the scanner calls it)
+        run: yq --version || sudo snap install yq
+      - name: Scan TEST_ARTIFACTS
+        run: |
+          rm -f logs/forensics.log
+          python -W ignore main.py TEST_ARTIFACTS > scanner_console_output.txt 2>&1
+      - name: Publish forensic summary to the run summary
+        if: always()
+        run: |
+          {
+            echo "## Forensics log"
+            echo
+            echo "Events per instrumented method:"
+            echo '```'
+            awk -F' [|] ' '{print $4}' logs/forensics.log | sed 's/:[0-9]*$//' | sort | uniq -c
+            echo '```'
+            echo "Warnings:"
+            echo '```'
+            grep WARNING logs/forensics.log | head -25
+            echo '```'
+            echo "Run start / end:"
+            echo '```'
+            grep -E "run (started|finished)" logs/forensics.log
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: forensics-logs
+          path: |
+            logs/forensics.log
+            scanner_console_output.txt
+            TEST_ARTIFACTS/slikube_results.csv
+            SLIKUBE.sarif
+
+  unit-tests:
+    name: Existing unit tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          cache: pip
+          cache-dependency-path: requirements-sqa.txt
+      - name: Install dependencies
+        run: pip install -r requirements-sqa.txt
+      # TEST_PARSING.py is the only original test file that does not depend on
+      # files from the original author's computer (see SQA-REPO.md).
+      - name: Run TEST_PARSING.py
+        run: python -W ignore TEST_PARSING.py
+
+  static-analysis:
+    name: Security static analysis (bandit)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install bandit
+        run: pip install bandit==1.9.4
+      - name: Run bandit
+        # Report only: findings are reviewed in SQA-REPO.md rather than failing the build.
+        run: |
+          mkdir -p logs
+          bandit -r . -x ./.venv -f txt -o logs/bandit_report.txt || true
+          { echo '## Bandit'; echo '```'; sed -n '/Run metrics/,$p' logs/bandit_report.txt; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: bandit-report
+          path: logs/bandit_report.txt
