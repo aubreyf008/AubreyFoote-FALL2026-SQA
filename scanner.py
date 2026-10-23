@@ -10,6 +10,8 @@ import os
 import pandas as pd 
 import numpy as np
 import json
+import forensics
+logObj = forensics.getLogger()
 from sarif_om import *
 from jschema_to_python.to_json import to_json
 
@@ -179,6 +181,8 @@ def scanForSecrets(yaml_d):
         if( len(unameList) > 0  )  or ( len(passwList) > 0  ) or ( len(keyList) > 0  ) :
             dic2ret_secret[key_] =  ( unameList, passwList, keyList ) 
     # print(dic2ret_secret)
+    # FORENSICS: which keys were flagged as hard-coded secrets (values deliberately not logged)
+    logObj.info('secret scan keys_examined=%d flagged=%s', len(key_lis), {k: (len(v[0]), len(v[1]), len(v[2])) for k, v in dic2ret_secret.items()})
     return dic2ret_secret
 
 
@@ -322,6 +326,8 @@ def scanSingleManifest( path_to_script ):
     #valid_taint_privi  = scanForOverPrivileges( path_to_script )
     # print(valid_taint_privi) 
 
+    # FORENSICS: secret key NAMES and counts only, never the secret values
+    logObj.info('manifest scanned file=%s k8s_valid=%s secret_keys=%s usernames=%d passwords=%d tokens=%d helm_taints=%d', path_to_script, checkVal, list(dict_secret.keys()), len(within_secret_[0]), len(within_secret_[1]), len(within_secret_[2]), len(valid_taint_secr))
     return within_secret_, templ_secret_, valid_taint_secr 
 
 
@@ -634,6 +640,8 @@ def scanDockerSock(path_script ):
 def runScanner(dir2scan):
     all_content   = [] 
     all_yml_files = getYAMLFiles(dir2scan)
+    # FORENSICS: start of a scan
+    logObj.info('scan started dir=%s yaml_files_found=%d', dir2scan, len(all_yml_files))
     val_cnt       = 0 
     for yml_ in all_yml_files:
         '''
@@ -656,6 +664,7 @@ def runScanner(dir2scan):
                     print("Kubernetes YAML")
                 
                 val_cnt = val_cnt + 1 
+                logObj.info('analyzing file #%d file=%s helm=%s k8s=%s', val_cnt, yml_, helm_flag, k8s_flag)
                 print(constants.ANLYZING_KW + yml_ + constants.COUNT_PRINT_KW + yml_ +str(val_cnt) )
                
                 print("get valid taint secrets")
@@ -727,15 +736,19 @@ def runScanner(dir2scan):
                 all_content.append( ( dir2scan, yml_, within_secret_, templ_secret_, valid_taint_secr, valid_taint_privi, http_dict, absentSecuContextDict, defaultNameSpaceDict, absentResourceDict, rollingUpdateDict, absentNetPolicyDic, pid_dic, ipc_dic, dockersock_dic, host_net_dic, cap_sys_dic, host_alias_dic, allow_privi_dic, unconfied_seccomp_dict, cap_module_dic, k8s_flag, helm_flag ) )
             else:
                 print("Invalid YAML --> ",yml_)
+                logObj.warning('skipped invalid YAML file=%s', yml_)
                 invalid_yaml.append(yml_)
         else:
             print(" Weird YAML --> ",yml_)
+            logObj.info('skipped non-manifest YAML (CI config etc.) file=%s', yml_)
             weird_yaml.append(yml_)
 
         sarif_json = to_json(sarif_log)
         #print(sarif_json)       
 
 
+    # FORENSICS: end-of-scan summary
+    logObj.info('scan finished dir=%s analyzed=%d invalid_total=%d weird_total=%d sarif_results=%d', dir2scan, len(all_content), len(invalid_yaml), len(weird_yaml), len(run.results))
     return all_content, sarif_json
 
 
@@ -920,6 +933,8 @@ def scanForHTTP( path2script ):
                 # The last element of the http_in_spec is the value so the second last element of the http_in_spec is the key
                 http_key = http_in_spec[-2]
                 print(" THIS IS HTTP KEY ----> ", http_key)
+                # FORENSICS: log the key, not the URL (URLs can embed user:password@host)
+                logObj.warning('plain HTTP value found file=%s key=%s', path2script, http_key)
 
                 if ( constants.SPEC_KW in just_keys ):
                     '''
@@ -973,6 +988,7 @@ def scanForHTTP( path2script ):
                          
     
     # print(sh_files_configmaps) 
+    logObj.info('HTTP scan file=%s http_findings=%d', path2script, http_count)
     return sh_files_configmaps
 
 def scanForUnconfinedSeccomp(path_script ):

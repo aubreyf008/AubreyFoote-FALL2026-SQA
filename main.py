@@ -8,6 +8,12 @@ import pandas as pd
 import constants
 from pathlib import Path
 import typer
+import forensics
+import getpass
+import os
+import platform
+import time
+logObj = forensics.getLogger()
 
 def getCountFromAnalysis(ls_):
     list2ret           = []
@@ -54,6 +60,9 @@ def main(directory: Path = typer.Argument(..., exists=True, help="Absolute path 
     Run KubeSec in a Kubernetes directory and get results in a CSV file.
 
     """
+    # FORENSICS: who ran the tool, where, on what
+    start_time = time.time()
+    logObj.info('SLI-KUBE run started user=%s host=%s python=%s cwd=%s target=%s', getpass.getuser(), platform.node(), platform.python_version(), os.getcwd(), os.path.abspath(directory))
     content_as_ls, sarif_json   = scanner.runScanner( directory )
     
     with open("SLIKUBE.sarif", "w") as f:
@@ -63,6 +72,8 @@ def main(directory: Path = typer.Argument(..., exists=True, help="Absolute path 
     outfile = Path(directory, "slikube_results.csv")
 
     df_all.to_csv( outfile, header= constants.CSV_HEADER , index=False, encoding= constants.CSV_ENCODING )
+    # FORENSICS: what was produced, with hashes so the outputs can be verified later
+    logObj.info('SLI-KUBE run finished files_reported=%d csv=%s (%s) sarif=%s (%s) seconds=%.2f', len(df_all), outfile, forensics.fileFingerprint(outfile), os.path.abspath('SLIKUBE.sarif'), forensics.fileFingerprint('SLIKUBE.sarif'), time.time() - start_time)
 
 
 if __name__ == '__main__':

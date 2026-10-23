@@ -7,6 +7,8 @@ import constants
 import parser 
 import os 
 from itertools import combinations
+import forensics
+logObj = forensics.getLogger()
 
 def getYAMLFiles(path_to_dir):
     valid_  = [] 
@@ -102,6 +104,8 @@ def mineSecretGraph( path2script, yaml_dict , secret_dict ):
                     within_match_head = hierarchy_list[0]
     valid_taints = getValidTaints( templ_match_list ) 
     # print( within_match_head ) 
+    # FORENSICS: record the taint-tracking result for this file
+    logObj.info('secret taint graph file=%s secret_keys=%s hierarchy_entries=%d template_matches=%d valid_taints=%s', path2script, list(secret_dict.keys()), len(hierarchy_list), len(templ_match_list), valid_taints)
     return within_match_head, templ_match_list, valid_taints 
 
 

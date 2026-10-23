@@ -32,6 +32,9 @@ import tempfile
 import time
 import traceback
 
+# Keep the forensic log for real scanner runs; fuzzing would flood it.
+os.environ.setdefault('SLIKUBE_FORENSICS', '0')
+
 import parser
 import scanner
 import graphtaint

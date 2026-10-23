@@ -14,6 +14,8 @@ import pathlib as pl
 import re
 import subprocess
 import os
+import forensics
+logObj = forensics.getLogger()
 
 #update basepath
 base_path = r" "
@@ -105,6 +107,8 @@ def checkIfValidK8SYaml(path2yaml):
     else: 
         if ( constants.API_V_KEYNAME in temp_ ) and (constants.KIND_KEY_NAME in temp_):
             val2ret = True 
+    # FORENSICS: record why a file was accepted or rejected as a Kubernetes manifest
+    logObj.info('k8s check file=%s valid=%s apiVersion_present=%s kind_present=%s forbidden_kind=%s', path2yaml, val2ret, constants.API_V_KEYNAME in temp_, constants.KIND_KEY_NAME in temp_, any(x_ in key_lis for x_ in constants.K8S_FORBIDDEN_KW_LIST))
     return val2ret
 
 
@@ -147,17 +151,26 @@ def checkParseError( path_script ):
             for dictionary in yaml.load_all(yml):
                 pass
         except ruamel.yaml.parser.ParserError as parse_error:
+            # FORENSICS: the original code only printed 'skipping'; keep the reason
+            logObj.warning('parse check failed file=%s error=%s: %s', path_script, type(parse_error).__name__, str(parse_error).replace(chr(10), ' '))
             flag = False
             print(constants.YAML_SKIPPING_TEXT)           
         except ruamel.yaml.error.YAMLError as exc:
+            # FORENSICS: the original code only printed 'skipping'; keep the reason
+            logObj.warning('parse check failed file=%s error=%s: %s', path_script, type(exc).__name__, str(exc).replace(chr(10), ' '))
             flag = False
             print( constants.YAML_SKIPPING_TEXT  )    
         except UnicodeDecodeError as err_: 
+            # FORENSICS: the original code only printed 'skipping'; keep the reason
+            logObj.warning('parse check failed file=%s error=%s: %s', path_script, type(err_).__name__, str(err_).replace(chr(10), ' '))
             flag = False
             print( constants.YAML_SKIPPING_TEXT  )
+    logObj.info('parse check file=%s parses_cleanly=%s', path_script, flag)
     return flag
 
 def loadMultiYAML( script_ ):
+    # FORENSICS: record which file (and exact content hash) is being loaded
+    logObj.info('loading YAML file=%s %s', script_, forensics.fileFingerprint(script_))
     dicts2ret = []  
     with open(script_, constants.FILE_READ_FLAG  ) as yml_content :
         yaml = ruamel.yaml.YAML()
@@ -168,10 +181,13 @@ def loadMultiYAML( script_ ):
                 # print(d_)
                 dicts2ret.append( d_ )
         except ruamel.yaml.parser.ParserError as parse_error:
+            logObj.warning('YAML parse failed file=%s error=%s: %s', script_, type(parse_error).__name__, str(parse_error).replace(chr(10), ' '))
             print(constants.YAML_SKIPPING_TEXT)           
         except ruamel.yaml.error.YAMLError as exc:
+            logObj.warning('YAML parse failed file=%s error=%s: %s', script_, type(exc).__name__, str(exc).replace(chr(10), ' '))
             print( constants.YAML_SKIPPING_TEXT  )    
         except UnicodeDecodeError as err_: 
+            logObj.warning('YAML parse failed file=%s error=%s: %s', script_, type(err_).__name__, str(err_).replace(chr(10), ' '))
             print( constants.YAML_SKIPPING_TEXT  )
         
         path = find_json_path_keys(dicts2ret)
@@ -196,6 +212,7 @@ def loadMultiYAML( script_ ):
             #     print(type(d))
                 
         #print(dicts2ret)
+    logObj.info('loaded YAML file=%s documents=%d', script_, len(dicts2ret))
     return dicts2ret
 
 
@@ -329,6 +346,8 @@ def show_line_for_paths(  filepath, key): #key_jsonpath_mapping is a global dict
                 #print(i)
                 yq_parameter = i + " | key | line "
                 #print(yq_parameter)
+                # FORENSICS: this method runs an external program; log the exact command
+                logObj.info('running external command: %s', ['yq', yq_parameter, filepath])
                 result = subprocess.check_output(["yq", yq_parameter , filepath], universal_newlines=True)
                 #result = subprocess.run(["C:/ProgramData/Chocolatey/bin/yq ",yq_parameter, filepath], shell = True, text= True, capture_output= True,cwd= env_PATH ) #env= {'PATH' : env_PATH}
                 #env= {'PATH': 'C:\ProgramData\Chocolatey\bin'}
@@ -344,6 +363,8 @@ def show_line_for_paths(  filepath, key): #key_jsonpath_mapping is a global dict
                 #print(lines)
         else:
             yq_parameter = key_jsonpath_mapping[key]+ " | key | line "
+            # FORENSICS: this method runs an external program; log the exact command
+            logObj.info('running external command: %s', ['yq', yq_parameter, filepath])
             result = subprocess.check_output(["yq", yq_parameter , filepath], universal_newlines=True)
                 #result = subprocess.run(["C:/ProgramData/Chocolatey/bin/yq ",yq_parameter, filepath], shell = True, text= True, capture_output= True,cwd= env_PATH ) #env= {'PATH' : env_PATH}
                 #env= {'PATH': 'C:\ProgramData\Chocolatey\bin'}
@@ -358,6 +379,7 @@ def show_line_for_paths(  filepath, key): #key_jsonpath_mapping is a global dict
                     lines.append(line_number)
                 #print(lines)
                    
+    logObj.info('line lookup file=%s key=%s lines=%s', filepath, key, lines)
     return lines
 
 
