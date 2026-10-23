@@ -6,6 +6,8 @@ Source Code to Run Tool on All Kubernetes Manifests
 import scanner 
 import pandas as pd 
 import constants
+from pathlib import Path
+import typer
 
 def getCountFromAnalysis(ls_):
     list2ret           = []
@@ -79,7 +81,7 @@ if __name__ == '__main__':
     # OUTPUT_FILE_CSV = '/Users/arahman/Documents/OneDriveWingUp/OneDrive-TennesseeTechUniversity/Research/Kubernetes/StaticTaint/data/V16_BRINTO_OUTPUT.csv'
 
     # take sarif_json from scanner
-    main()
+    typer.run(main)
 
 
 
