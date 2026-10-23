@@ -1,0 +1,1789 @@
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/absent.prome.yaml
+Kubernetes YAML
+Analyzing... TEST_ARTIFACTS/absent.prome.yaml COUNT: TEST_ARTIFACTS/absent.prome.yaml1
+get valid taint secrets
+get privileged security contexts
+get insecure HTTP
+get missing security context
+get use of default namespace
+get missing resource limit
+get absent rolling update count
+get absent network policy count
+This is the mapping for the Key spec ---> .spec
+ get hostPIDs where True is assigned 
+get hostIPCs where True is assigned
+scan for docker sock paths: /var.run/docker.sock
+scan for hostNetwork where True is assigned 
+scan for CAP SYS
+scan for Host Aliases
+scan for allowPrivilegeEscalation
+scan for unconfied seccomp 
+ scan for cap sys module 
+ 
+
+---------------END FILE RUNNING--------------
+-----
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/fp_secu_context_miss.yaml
+Kubernetes YAML
+Analyzing... TEST_ARTIFACTS/fp_secu_context_miss.yaml COUNT: TEST_ARTIFACTS/fp_secu_context_miss.yaml2
+get valid taint secrets
+get privileged security contexts
+get insecure HTTP
+get missing security context
+get use of default namespace
+get missing resource limit
+get absent rolling update count
+get absent network policy count
+ get hostPIDs where True is assigned 
+get hostIPCs where True is assigned
+scan for docker sock paths: /var.run/docker.sock
+scan for hostNetwork where True is assigned 
+scan for CAP SYS
+scan for Host Aliases
+scan for allowPrivilegeEscalation
+scan for unconfied seccomp 
+ scan for cap sys module 
+ 
+
+---------------END FILE RUNNING--------------
+-----
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/fp.nspace2.yaml
+Kubernetes YAML
+Analyzing... TEST_ARTIFACTS/fp.nspace2.yaml COUNT: TEST_ARTIFACTS/fp.nspace2.yaml3
+get valid taint secrets
+get privileged security contexts
+get insecure HTTP
+get missing security context
+get use of default namespace
+get missing resource limit
+get absent rolling update count
+get absent network policy count
+This is the mapping for the Key spec ---> .spec
+ get hostPIDs where True is assigned 
+get hostIPCs where True is assigned
+scan for docker sock paths: /var.run/docker.sock
+scan for hostNetwork where True is assigned 
+scan for CAP SYS
+scan for Host Aliases
+scan for allowPrivilegeEscalation
+scan for unconfied seccomp 
+ scan for cap sys module 
+ 
+
+---------------END FILE RUNNING--------------
+-----
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/skampi.values.yaml
+Invalid YAML -->  TEST_ARTIFACTS/skampi.values.yaml
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/charts.values.yaml
+HELM Chart
+Analyzing... TEST_ARTIFACTS/charts.values.yaml COUNT: TEST_ARTIFACTS/charts.values.yaml4
+get valid taint secrets
+This is the mapping for the Key password ---> .hdbppdb.db.password
+22
+This is the mapping for the Key user ---> .hdbppdb.db.user
+21
+get privileged security contexts
+get insecure HTTP
+get missing security context
+get use of default namespace
+get missing resource limit
+get absent rolling update count
+get absent network policy count
+ get hostPIDs where True is assigned 
+get hostIPCs where True is assigned
+scan for docker sock paths: /var.run/docker.sock
+scan for hostNetwork where True is assigned 
+scan for CAP SYS
+scan for Host Aliases
+scan for allowPrivilegeEscalation
+scan for unconfied seccomp 
+ scan for cap sys module 
+ 
+
+---------------END FILE RUNNING--------------
+-----
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/fp.no.reso8.yaml
+Kubernetes YAML
+Analyzing... TEST_ARTIFACTS/fp.no.reso8.yaml COUNT: TEST_ARTIFACTS/fp.no.reso8.yaml5
+get valid taint secrets
+get privileged security contexts
+get insecure HTTP
+get missing security context
+get use of default namespace
+get missing resource limit
+get absent rolling update count
+This is the mapping for the Key spec ---> .spec
+get absent network policy count
+This is the mapping for the Key spec ---> .spec
+ get hostPIDs where True is assigned 
+get hostIPCs where True is assigned
+scan for docker sock paths: /var.run/docker.sock
+scan for hostNetwork where True is assigned 
+scan for CAP SYS
+scan for Host Aliases
+scan for allowPrivilegeEscalation
+scan for unconfied seccomp 
+ scan for cap sys module 
+ 
+
+---------------END FILE RUNNING--------------
+-----
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/test.sample.pod.yaml
+Kubernetes YAML
+Analyzing... TEST_ARTIFACTS/test.sample.pod.yaml COUNT: TEST_ARTIFACTS/test.sample.pod.yaml6
+get valid taint secrets
+get privileged security contexts
+This is the mapping for the Key privileged ---> .spec.containers[0].securityContext.privileged
+get insecure HTTP
+get missing security context
+get use of default namespace
+get missing resource limit
+This is the mapping for the Key spec ---> .spec
+get absent rolling update count
+get absent network policy count
+This is the mapping for the Key spec ---> .spec
+ get hostPIDs where True is assigned 
+get hostIPCs where True is assigned
+scan for docker sock paths: /var.run/docker.sock
+scan for hostNetwork where True is assigned 
+scan for CAP SYS
+scan for Host Aliases
+scan for allowPrivilegeEscalation
+scan for unconfied seccomp 
+ scan for cap sys module 
+ 
+
+---------------END FILE RUNNING--------------
+-----
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/list.k8s.yml
+Invalid YAML -->  TEST_ARTIFACTS/list.k8s.yml
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/tango.values.yaml
+Invalid YAML -->  TEST_ARTIFACTS/tango.values.yaml
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/fp.no.reso4.yaml
+Kubernetes YAML
+Analyzing... TEST_ARTIFACTS/fp.no.reso4.yaml COUNT: TEST_ARTIFACTS/fp.no.reso4.yaml7
+get valid taint secrets
+get privileged security contexts
+get insecure HTTP
+get missing security context
+get use of default namespace
+get missing resource limit
+get absent rolling update count
+get absent network policy count
+This is the mapping for the Key spec ---> .spec.template.spec
+ get hostPIDs where True is assigned 
+get hostIPCs where True is assigned
+scan for docker sock paths: /var.run/docker.sock
+scan for hostNetwork where True is assigned 
+scan for CAP SYS
+scan for Host Aliases
+scan for allowPrivilegeEscalation
+scan for unconfied seccomp 
+ scan for cap sys module 
+ 
+
+---------------END FILE RUNNING--------------
+-----
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/tasks.main.yml
+Invalid YAML -->  TEST_ARTIFACTS/tasks.main.yml
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/roll.present.deploy.yaml
+Kubernetes YAML
+Analyzing... TEST_ARTIFACTS/roll.present.deploy.yaml COUNT: TEST_ARTIFACTS/roll.present.deploy.yaml8
+get valid taint secrets
+get privileged security contexts
+get insecure HTTP
+get missing security context
+get use of default namespace
+get missing resource limit
+get absent rolling update count
+This is the mapping for the Key spec ---> .spec.template.spec
+get absent network policy count
+This is the mapping for the Key spec ---> .spec.template.spec
+ get hostPIDs where True is assigned 
+get hostIPCs where True is assigned
+scan for docker sock paths: /var.run/docker.sock
+scan for hostNetwork where True is assigned 
+scan for CAP SYS
+scan for Host Aliases
+scan for allowPrivilegeEscalation
+scan for unconfied seccomp 
+ scan for cap sys module 
+ 
+
+---------------END FILE RUNNING--------------
+-----
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/fp.no.reso5.yaml
+Kubernetes YAML
+Analyzing... TEST_ARTIFACTS/fp.no.reso5.yaml COUNT: TEST_ARTIFACTS/fp.no.reso5.yaml9
+get valid taint secrets
+get privileged security contexts
+get insecure HTTP
+get missing security context
+get use of default namespace
+get missing resource limit
+get absent rolling update count
+get absent network policy count
+This is the mapping for the Key spec ---> .spec.template.spec
+ get hostPIDs where True is assigned 
+get hostIPCs where True is assigned
+scan for docker sock paths: /var.run/docker.sock
+scan for hostNetwork where True is assigned 
+scan for CAP SYS
+scan for Host Aliases
+scan for allowPrivilegeEscalation
+scan for unconfied seccomp 
+ scan for cap sys module 
+ 
+
+---------------END FILE RUNNING--------------
+-----
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/nginx.present.yaml
+Kubernetes YAML
+Analyzing... TEST_ARTIFACTS/nginx.present.yaml COUNT: TEST_ARTIFACTS/nginx.present.yaml10
+get valid taint secrets
+get privileged security contexts
+get insecure HTTP
+get missing security context
+get use of default namespace
+get missing resource limit
+get absent rolling update count
+get absent network policy count
+This is the mapping for the Key spec ---> .spec.template.spec
+ get hostPIDs where True is assigned 
+get hostIPCs where True is assigned
+scan for docker sock paths: /var.run/docker.sock
+scan for hostNetwork where True is assigned 
+scan for CAP SYS
+scan for Host Aliases
+scan for allowPrivilegeEscalation
+scan for unconfied seccomp 
+ scan for cap sys module 
+ 
+
+---------------END FILE RUNNING--------------
+-----
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/special.secret1.yaml
+Kubernetes YAML
+Analyzing... TEST_ARTIFACTS/special.secret1.yaml COUNT: TEST_ARTIFACTS/special.secret1.yaml11
+get valid taint secrets
+This is the mapping for the Key postgresql-user ---> .data.postgresql-user
+8
+This is the mapping for the Key postgresql-password ---> .data.postgresql-password
+16
+This is the mapping for the Key rabbitmq-user ---> .data.rabbitmq-user
+23
+This is the mapping for the Key rabbitmq-password ---> .data.rabbitmq-password
+31
+get privileged security contexts
+get insecure HTTP
+get missing security context
+get use of default namespace
+get missing resource limit
+get absent rolling update count
+get absent network policy count
+This is the mapping for the Key spec ---> .spec
+ get hostPIDs where True is assigned 
+get hostIPCs where True is assigned
+scan for docker sock paths: /var.run/docker.sock
+scan for hostNetwork where True is assigned 
+scan for CAP SYS
+scan for Host Aliases
+scan for allowPrivilegeEscalation
+scan for unconfied seccomp 
+ scan for cap sys module 
+ 
+
+---------------END FILE RUNNING--------------
+-----
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/present.deployment.default.yaml
+Kubernetes YAML
+Analyzing... TEST_ARTIFACTS/present.deployment.default.yaml COUNT: TEST_ARTIFACTS/present.deployment.default.yaml12
+get valid taint secrets
+get privileged security contexts
+get insecure HTTP
+get missing security context
+get use of default namespace
+This is the mapping for the Key namespace ---> .metadata.namespace
+get missing resource limit
+get absent rolling update count
+get absent network policy count
+This is the mapping for the Key spec ---> .spec.template.spec
+ get hostPIDs where True is assigned 
+get hostIPCs where True is assigned
+scan for docker sock paths: /var.run/docker.sock
+scan for hostNetwork where True is assigned 
+scan for CAP SYS
+scan for Host Aliases
+scan for allowPrivilegeEscalation
+scan for unconfied seccomp 
+ scan for cap sys module 
+ 
+
+---------------END FILE RUNNING--------------
+-----
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/docker.sock.yaml
+Kubernetes YAML
+Analyzing... TEST_ARTIFACTS/docker.sock.yaml COUNT: TEST_ARTIFACTS/docker.sock.yaml13
+get valid taint secrets
+get privileged security contexts
+get insecure HTTP
+get missing security context
+get use of default namespace
+get missing resource limit
+get absent rolling update count
+get absent network policy count
+This is the mapping for the Key spec ---> .spec.template.spec
+ get hostPIDs where True is assigned 
+get hostIPCs where True is assigned
+scan for docker sock paths: /var.run/docker.sock
+This is the mapping for the Key mountPath ---> .spec.template.spec.containers[0].volumeMounts[4].mountPath
+scan for hostNetwork where True is assigned 
+This is the mapping for the Key hostNetwork ---> .spec.template.spec.hostNetwork
+scan for CAP SYS
+scan for Host Aliases
+scan for allowPrivilegeEscalation
+scan for unconfied seccomp 
+ scan for cap sys module 
+ 
+
+---------------END FILE RUNNING--------------
+-----
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/helm.values.yaml
+HELM Chart
+Analyzing... TEST_ARTIFACTS/helm.values.yaml COUNT: TEST_ARTIFACTS/helm.values.yaml14
+get valid taint secrets
+This is the mapping for the Key user ---> .grafana.user
+64
+This is the mapping for the Key password ---> .grafana.password
+65
+get privileged security contexts
+get insecure HTTP
+get missing security context
+get use of default namespace
+get missing resource limit
+get absent rolling update count
+get absent network policy count
+ get hostPIDs where True is assigned 
+get hostIPCs where True is assigned
+scan for docker sock paths: /var.run/docker.sock
+scan for hostNetwork where True is assigned 
+scan for CAP SYS
+scan for Host Aliases
+scan for allowPrivilegeEscalation
+scan for unconfied seccomp 
+ scan for cap sys module 
+ 
+
+---------------END FILE RUNNING--------------
+-----
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/cap.sys.yaml
+Kubernetes YAML
+Analyzing... TEST_ARTIFACTS/cap.sys.yaml COUNT: TEST_ARTIFACTS/cap.sys.yaml15
+get valid taint secrets
+get privileged security contexts
+get insecure HTTP
+ THIS IS HTTP KEY ---->  2
+This is the mapping for the Key 2 ---> None
+ THIS IS HTTP KEY ---->  2
+This is the mapping for the Key 2 ---> None
+get missing security context
+get use of default namespace
+get missing resource limit
+get absent rolling update count
+get absent network policy count
+This is the mapping for the Key spec ---> .spec.template.spec
+ get hostPIDs where True is assigned 
+get hostIPCs where True is assigned
+scan for docker sock paths: /var.run/docker.sock
+scan for hostNetwork where True is assigned 
+scan for CAP SYS
+This is the mapping for the Key add ---> .spec.template.spec.containers[0].securityContext.capabilities.add
+scan for Host Aliases
+This is the mapping for the Key hostAliases ---> .spec.template.spec.hostAliases
+scan for allowPrivilegeEscalation
+scan for unconfied seccomp 
+ scan for cap sys module 
+This is the mapping for the Key add ---> .spec.template.spec.containers[0].securityContext.capabilities.add
+ 
+
+---------------END FILE RUNNING--------------
+-----
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/present.roll.yaml
+Kubernetes YAML
+Analyzing... TEST_ARTIFACTS/present.roll.yaml COUNT: TEST_ARTIFACTS/present.roll.yaml16
+get valid taint secrets
+get privileged security contexts
+get insecure HTTP
+get missing security context
+get use of default namespace
+This is the mapping for the Key namespace ---> .metadata.namespace
+get missing resource limit
+get absent rolling update count
+get absent network policy count
+This is the mapping for the Key spec ---> .spec.template.spec
+ get hostPIDs where True is assigned 
+get hostIPCs where True is assigned
+scan for docker sock paths: /var.run/docker.sock
+scan for hostNetwork where True is assigned 
+scan for CAP SYS
+scan for Host Aliases
+scan for allowPrivilegeEscalation
+scan for unconfied seccomp 
+ scan for cap sys module 
+ 
+
+---------------END FILE RUNNING--------------
+-----
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/githooks.yaml
+Invalid YAML -->  TEST_ARTIFACTS/githooks.yaml
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/fp.no.reso9.yaml
+Kubernetes YAML
+Analyzing... TEST_ARTIFACTS/fp.no.reso9.yaml COUNT: TEST_ARTIFACTS/fp.no.reso9.yaml17
+get valid taint secrets
+get privileged security contexts
+get insecure HTTP
+ THIS IS HTTP KEY ---->  value
+This is the mapping for the Key value ---> .spec.template.spec.containers[0].env[3].value
+get missing security context
+get use of default namespace
+get missing resource limit
+get absent rolling update count
+This is the mapping for the Key spec ---> .spec.template.spec
+get absent network policy count
+This is the mapping for the Key spec ---> .spec.template.spec
+ get hostPIDs where True is assigned 
+get hostIPCs where True is assigned
+scan for docker sock paths: /var.run/docker.sock
+scan for hostNetwork where True is assigned 
+scan for CAP SYS
+scan for Host Aliases
+scan for allowPrivilegeEscalation
+scan for unconfied seccomp 
+ scan for cap sys module 
+ 
+
+---------------END FILE RUNNING--------------
+-----
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/calico.yaml
+Invalid YAML -->  TEST_ARTIFACTS/calico.yaml
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/fp.nspace3.yaml
+Kubernetes YAML
+Analyzing... TEST_ARTIFACTS/fp.nspace3.yaml COUNT: TEST_ARTIFACTS/fp.nspace3.yaml18
+get valid taint secrets
+get privileged security contexts
+get insecure HTTP
+get missing security context
+get use of default namespace
+get missing resource limit
+get absent rolling update count
+get absent network policy count
+This is the mapping for the Key spec ---> .spec
+ get hostPIDs where True is assigned 
+get hostIPCs where True is assigned
+scan for docker sock paths: /var.run/docker.sock
+scan for hostNetwork where True is assigned 
+scan for CAP SYS
+scan for Host Aliases
+scan for allowPrivilegeEscalation
+scan for unconfied seccomp 
+ scan for cap sys module 
+ 
+
+---------------END FILE RUNNING--------------
+-----
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/sni.values.yaml
+Invalid YAML -->  TEST_ARTIFACTS/sni.values.yaml
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/start_vault_temp.yaml
+Invalid YAML -->  TEST_ARTIFACTS/start_vault_temp.yaml
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/no.secu.nfs.yaml
+Kubernetes YAML
+Analyzing... TEST_ARTIFACTS/no.secu.nfs.yaml COUNT: TEST_ARTIFACTS/no.secu.nfs.yaml19
+get valid taint secrets
+get privileged security contexts
+This is the mapping for the Key privileged ---> .spec.containers[0].securityContext.privileged
+get insecure HTTP
+ THIS IS HTTP KEY ---->  2
+This is the mapping for the Key 2 ---> None
+ THIS IS HTTP KEY ---->  2
+This is the mapping for the Key 2 ---> None
+get missing security context
+get use of default namespace
+get missing resource limit
+This is the mapping for the Key spec ---> .spec
+get absent rolling update count
+get absent network policy count
+This is the mapping for the Key spec ---> .spec
+ get hostPIDs where True is assigned 
+get hostIPCs where True is assigned
+scan for docker sock paths: /var.run/docker.sock
+scan for hostNetwork where True is assigned 
+scan for CAP SYS
+scan for Host Aliases
+scan for allowPrivilegeEscalation
+scan for unconfied seccomp 
+ scan for cap sys module 
+ 
+
+---------------END FILE RUNNING--------------
+-----
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/no.secu.present.yaml
+Kubernetes YAML
+Analyzing... TEST_ARTIFACTS/no.secu.present.yaml COUNT: TEST_ARTIFACTS/no.secu.present.yaml20
+get valid taint secrets
+get privileged security contexts
+get insecure HTTP
+get missing security context
+get use of default namespace
+get missing resource limit
+get absent rolling update count
+This is the mapping for the Key spec ---> .spec.template.spec
+get absent network policy count
+This is the mapping for the Key spec ---> .spec.template.spec
+ get hostPIDs where True is assigned 
+get hostIPCs where True is assigned
+scan for docker sock paths: /var.run/docker.sock
+This is the mapping for the Key mountPath ---> .spec.template.spec.containers[0].volumeMounts[1].mountPath
+scan for hostNetwork where True is assigned 
+scan for CAP SYS
+scan for Host Aliases
+scan for allowPrivilegeEscalation
+scan for unconfied seccomp 
+ scan for cap sys module 
+ 
+
+---------------END FILE RUNNING--------------
+-----
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/artifact.nfs.server.yaml
+Kubernetes YAML
+Analyzing... TEST_ARTIFACTS/artifact.nfs.server.yaml COUNT: TEST_ARTIFACTS/artifact.nfs.server.yaml21
+get valid taint secrets
+get privileged security contexts
+This is the mapping for the Key privileged ---> .spec.containers[0].securityContext.privileged
+get insecure HTTP
+ THIS IS HTTP KEY ---->  2
+This is the mapping for the Key 2 ---> None
+ THIS IS HTTP KEY ---->  2
+This is the mapping for the Key 2 ---> None
+get missing security context
+get use of default namespace
+get missing resource limit
+This is the mapping for the Key spec ---> .spec
+get absent rolling update count
+get absent network policy count
+This is the mapping for the Key spec ---> .spec
+ get hostPIDs where True is assigned 
+get hostIPCs where True is assigned
+scan for docker sock paths: /var.run/docker.sock
+scan for hostNetwork where True is assigned 
+scan for CAP SYS
+scan for Host Aliases
+scan for allowPrivilegeEscalation
+scan for unconfied seccomp 
+ scan for cap sys module 
+ 
+
+---------------END FILE RUNNING--------------
+-----
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/fp.no.reso2.yaml
+Kubernetes YAML
+Analyzing... TEST_ARTIFACTS/fp.no.reso2.yaml COUNT: TEST_ARTIFACTS/fp.no.reso2.yaml22
+get valid taint secrets
+get privileged security contexts
+get insecure HTTP
+get missing security context
+get use of default namespace
+get missing resource limit
+get absent rolling update count
+This is the mapping for the Key spec ---> .spec.template.spec
+get absent network policy count
+This is the mapping for the Key spec ---> .spec.template.spec
+ get hostPIDs where True is assigned 
+get hostIPCs where True is assigned
+scan for docker sock paths: /var.run/docker.sock
+scan for hostNetwork where True is assigned 
+scan for CAP SYS
+scan for Host Aliases
+scan for allowPrivilegeEscalation
+scan for unconfied seccomp 
+ scan for cap sys module 
+ 
+
+---------------END FILE RUNNING--------------
+-----
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/reso.app.yml
+Invalid YAML -->  TEST_ARTIFACTS/reso.app.yml
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/fp.seccomp.unconfined.yaml
+Kubernetes YAML
+Analyzing... TEST_ARTIFACTS/fp.seccomp.unconfined.yaml COUNT: TEST_ARTIFACTS/fp.seccomp.unconfined.yaml23
+get valid taint secrets
+get privileged security contexts
+get insecure HTTP
+get missing security context
+get use of default namespace
+get missing resource limit
+This is the mapping for the Key spec ---> .spec
+get absent rolling update count
+get absent network policy count
+This is the mapping for the Key spec ---> .spec
+ get hostPIDs where True is assigned 
+get hostIPCs where True is assigned
+scan for docker sock paths: /var.run/docker.sock
+scan for hostNetwork where True is assigned 
+scan for CAP SYS
+scan for Host Aliases
+scan for allowPrivilegeEscalation
+scan for unconfied seccomp 
+ scan for cap sys module 
+ 
+
+---------------END FILE RUNNING--------------
+-----
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/minecraft.values.yaml
+Invalid YAML -->  TEST_ARTIFACTS/minecraft.values.yaml
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/absent.ingress.yaml
+Invalid YAML -->  TEST_ARTIFACTS/absent.ingress.yaml
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/dataimage.airflowimage.manifests.deployment.yaml
+Kubernetes YAML
+Analyzing... TEST_ARTIFACTS/dataimage.airflowimage.manifests.deployment.yaml COUNT: TEST_ARTIFACTS/dataimage.airflowimage.manifests.deployment.yaml24
+get valid taint secrets
+get privileged security contexts
+get insecure HTTP
+get missing security context
+get use of default namespace
+This is the mapping for the Key namespace ---> .metadata.namespace
+get missing resource limit
+get absent rolling update count
+This is the mapping for the Key spec ---> .spec.template.spec
+get absent network policy count
+This is the mapping for the Key spec ---> .spec.template.spec
+ get hostPIDs where True is assigned 
+get hostIPCs where True is assigned
+scan for docker sock paths: /var.run/docker.sock
+scan for hostNetwork where True is assigned 
+scan for CAP SYS
+scan for Host Aliases
+scan for allowPrivilegeEscalation
+scan for unconfied seccomp 
+ scan for cap sys module 
+ 
+
+---------------END FILE RUNNING--------------
+-----
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/php.roll.present.yaml
+Kubernetes YAML
+Analyzing... TEST_ARTIFACTS/php.roll.present.yaml COUNT: TEST_ARTIFACTS/php.roll.present.yaml25
+get valid taint secrets
+get privileged security contexts
+get insecure HTTP
+get missing security context
+get use of default namespace
+get missing resource limit
+get absent rolling update count
+get absent network policy count
+This is the mapping for the Key spec ---> .spec.template.spec
+ get hostPIDs where True is assigned 
+get hostIPCs where True is assigned
+scan for docker sock paths: /var.run/docker.sock
+scan for hostNetwork where True is assigned 
+scan for CAP SYS
+scan for Host Aliases
+scan for allowPrivilegeEscalation
+scan for unconfied seccomp 
+ scan for cap sys module 
+ 
+
+---------------END FILE RUNNING--------------
+-----
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/sample-nfs-server.yaml
+Kubernetes YAML
+Analyzing... TEST_ARTIFACTS/sample-nfs-server.yaml COUNT: TEST_ARTIFACTS/sample-nfs-server.yaml26
+get valid taint secrets
+get privileged security contexts
+This is the mapping for the Key privileged ---> .spec.containers[0].securityContext.privileged
+get insecure HTTP
+get missing security context
+get use of default namespace
+get missing resource limit
+This is the mapping for the Key spec ---> .spec
+get absent rolling update count
+get absent network policy count
+This is the mapping for the Key spec ---> .spec
+ get hostPIDs where True is assigned 
+get hostIPCs where True is assigned
+scan for docker sock paths: /var.run/docker.sock
+scan for hostNetwork where True is assigned 
+scan for CAP SYS
+scan for Host Aliases
+scan for allowPrivilegeEscalation
+scan for unconfied seccomp 
+ scan for cap sys module 
+ 
+
+---------------END FILE RUNNING--------------
+-----
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/tp_secu_context_miss.yaml
+Kubernetes YAML
+Analyzing... TEST_ARTIFACTS/tp_secu_context_miss.yaml COUNT: TEST_ARTIFACTS/tp_secu_context_miss.yaml27
+get valid taint secrets
+get privileged security contexts
+get insecure HTTP
+get missing security context
+This is the mapping for the Key spec ---> .spec.template.spec
+get use of default namespace
+get missing resource limit
+This is the mapping for the Key spec ---> .spec.template.spec
+get absent rolling update count
+get absent network policy count
+This is the mapping for the Key spec ---> .spec.template.spec
+ get hostPIDs where True is assigned 
+get hostIPCs where True is assigned
+scan for docker sock paths: /var.run/docker.sock
+scan for hostNetwork where True is assigned 
+scan for CAP SYS
+scan for Host Aliases
+scan for allowPrivilegeEscalation
+scan for unconfied seccomp 
+ scan for cap sys module 
+ 
+
+---------------END FILE RUNNING--------------
+-----
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/helm.stackgres.yaml
+Invalid YAML -->  TEST_ARTIFACTS/helm.stackgres.yaml
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/k8s.doc.network.yaml
+Kubernetes YAML
+Analyzing... TEST_ARTIFACTS/k8s.doc.network.yaml COUNT: TEST_ARTIFACTS/k8s.doc.network.yaml28
+get valid taint secrets
+get privileged security contexts
+get insecure HTTP
+get missing security context
+get use of default namespace
+This is the mapping for the Key namespace ---> .metadata.namespace
+get missing resource limit
+get absent rolling update count
+get absent network policy count
+ get hostPIDs where True is assigned 
+get hostIPCs where True is assigned
+scan for docker sock paths: /var.run/docker.sock
+scan for hostNetwork where True is assigned 
+scan for CAP SYS
+scan for Host Aliases
+scan for allowPrivilegeEscalation
+scan for unconfied seccomp 
+ scan for cap sys module 
+ 
+
+---------------END FILE RUNNING--------------
+-----
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/fp.http.yaml
+Kubernetes YAML
+Analyzing... TEST_ARTIFACTS/fp.http.yaml COUNT: TEST_ARTIFACTS/fp.http.yaml29
+get valid taint secrets
+get privileged security contexts
+get insecure HTTP
+get missing security context
+get use of default namespace
+get missing resource limit
+get absent rolling update count
+get absent network policy count
+This is the mapping for the Key spec ---> .spec
+ get hostPIDs where True is assigned 
+get hostIPCs where True is assigned
+scan for docker sock paths: /var.run/docker.sock
+scan for hostNetwork where True is assigned 
+scan for CAP SYS
+scan for Host Aliases
+scan for allowPrivilegeEscalation
+scan for unconfied seccomp 
+ scan for cap sys module 
+ 
+
+---------------END FILE RUNNING--------------
+-----
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/bootstrap.debian.yaml
+Invalid YAML -->  TEST_ARTIFACTS/bootstrap.debian.yaml
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/tp.default.nspace.yaml
+Kubernetes YAML
+Analyzing... TEST_ARTIFACTS/tp.default.nspace.yaml COUNT: TEST_ARTIFACTS/tp.default.nspace.yaml30
+get valid taint secrets
+get privileged security contexts
+get insecure HTTP
+get missing security context
+get use of default namespace
+This is the mapping for the Key namespace ---> .metadata.namespace
+get missing resource limit
+get absent rolling update count
+This is the mapping for the Key spec ---> .spec.template.spec
+get absent network policy count
+This is the mapping for the Key spec ---> .spec.template.spec
+ get hostPIDs where True is assigned 
+get hostIPCs where True is assigned
+scan for docker sock paths: /var.run/docker.sock
+scan for hostNetwork where True is assigned 
+scan for CAP SYS
+scan for Host Aliases
+scan for allowPrivilegeEscalation
+scan for unconfied seccomp 
+ scan for cap sys module 
+ 
+
+---------------END FILE RUNNING--------------
+-----
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/fp.no.reso3.yaml
+Kubernetes YAML
+Analyzing... TEST_ARTIFACTS/fp.no.reso3.yaml COUNT: TEST_ARTIFACTS/fp.no.reso3.yaml31
+get valid taint secrets
+This is the mapping for the Key password.properties ---> ['.data.password*properties']
+<class 'int'>
+<class 'int'>
+<class 'int'>
+<class 'int'>
+17
+This is the mapping for the Key username.properties ---> ['.data.username*properties']
+<class 'int'>
+<class 'int'>
+<class 'int'>
+<class 'int'>
+16
+get privileged security contexts
+get insecure HTTP
+get missing security context
+get use of default namespace
+get missing resource limit
+get absent rolling update count
+get absent network policy count
+This is the mapping for the Key spec ---> .spec
+ get hostPIDs where True is assigned 
+get hostIPCs where True is assigned
+scan for docker sock paths: /var.run/docker.sock
+scan for hostNetwork where True is assigned 
+scan for CAP SYS
+scan for Host Aliases
+scan for allowPrivilegeEscalation
+scan for unconfied seccomp 
+ scan for cap sys module 
+ 
+
+---------------END FILE RUNNING--------------
+-----
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/present.default.ksql.yaml
+Kubernetes YAML
+Analyzing... TEST_ARTIFACTS/present.default.ksql.yaml COUNT: TEST_ARTIFACTS/present.default.ksql.yaml32
+get valid taint secrets
+get privileged security contexts
+get insecure HTTP
+get missing security context
+This is the mapping for the Key spec ---> .spec
+This is the mapping for the Key spec ---> .spec
+This is the mapping for the Key spec ---> .spec
+get use of default namespace
+This is the mapping for the Key namespace ---> .metadata.namespace
+get missing resource limit
+This is the mapping for the Key spec ---> .spec
+get absent rolling update count
+get absent network policy count
+This is the mapping for the Key spec ---> .spec
+ get hostPIDs where True is assigned 
+get hostIPCs where True is assigned
+scan for docker sock paths: /var.run/docker.sock
+scan for hostNetwork where True is assigned 
+scan for CAP SYS
+scan for Host Aliases
+scan for allowPrivilegeEscalation
+scan for unconfied seccomp 
+ scan for cap sys module 
+ 
+
+---------------END FILE RUNNING--------------
+-----
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/keycloak.values.yaml
+Invalid YAML -->  TEST_ARTIFACTS/keycloak.values.yaml
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/fp.concourse.yaml
+Invalid YAML -->  TEST_ARTIFACTS/fp.concourse.yaml
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/empty.yml
+Kubernetes YAML
+Analyzing... TEST_ARTIFACTS/empty.yml COUNT: TEST_ARTIFACTS/empty.yml33
+get valid taint secrets
+get privileged security contexts
+get insecure HTTP
+ THIS IS HTTP KEY ---->  config.yaml
+This is the mapping for the Key config.yaml ---> ['.data.config*yaml']
+<class 'int'>
+<class 'int'>
+<class 'int'>
+<class 'int'>
+<class 'int'>
+<class 'int'>
+get missing security context
+get use of default namespace
+get missing resource limit
+get absent rolling update count
+This is the mapping for the Key spec ---> .spec
+get absent network policy count
+This is the mapping for the Key spec ---> .spec
+ get hostPIDs where True is assigned 
+get hostIPCs where True is assigned
+scan for docker sock paths: /var.run/docker.sock
+scan for hostNetwork where True is assigned 
+scan for CAP SYS
+scan for Host Aliases
+scan for allowPrivilegeEscalation
+scan for unconfied seccomp 
+ scan for cap sys module 
+ 
+
+---------------END FILE RUNNING--------------
+-----
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/hello.values.yaml
+Invalid YAML -->  TEST_ARTIFACTS/hello.values.yaml
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/kubecf.values.yaml
+Invalid YAML -->  TEST_ARTIFACTS/kubecf.values.yaml
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/bakis.rs.yaml
+Kubernetes YAML
+Analyzing... TEST_ARTIFACTS/bakis.rs.yaml COUNT: TEST_ARTIFACTS/bakis.rs.yaml34
+get valid taint secrets
+get privileged security contexts
+get insecure HTTP
+get missing security context
+get use of default namespace
+get missing resource limit
+get absent rolling update count
+get absent network policy count
+This is the mapping for the Key spec ---> .spec.template.spec
+ get hostPIDs where True is assigned 
+get hostIPCs where True is assigned
+scan for docker sock paths: /var.run/docker.sock
+scan for hostNetwork where True is assigned 
+scan for CAP SYS
+scan for Host Aliases
+scan for allowPrivilegeEscalation
+scan for unconfied seccomp 
+ scan for cap sys module 
+ 
+
+---------------END FILE RUNNING--------------
+-----
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/cap-module-ostk.yaml
+Kubernetes YAML
+Analyzing... TEST_ARTIFACTS/cap-module-ostk.yaml COUNT: TEST_ARTIFACTS/cap-module-ostk.yaml35
+get valid taint secrets
+get privileged security contexts
+get insecure HTTP
+get missing security context
+get use of default namespace
+get missing resource limit
+get absent rolling update count
+get absent network policy count
+This is the mapping for the Key spec ---> .spec.template.spec
+ get hostPIDs where True is assigned 
+get hostIPCs where True is assigned
+scan for docker sock paths: /var.run/docker.sock
+scan for hostNetwork where True is assigned 
+scan for CAP SYS
+This is the mapping for the Key add ---> .spec.template.spec.containers[0].securityContext.capabilities.add
+scan for Host Aliases
+This is the mapping for the Key hostAliases ---> .spec.template.spec.hostAliases
+scan for allowPrivilegeEscalation
+scan for unconfied seccomp 
+ scan for cap sys module 
+This is the mapping for the Key add ---> .spec.template.spec.containers[0].securityContext.capabilities.add
+ 
+
+---------------END FILE RUNNING--------------
+-----
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/host-net-tp.yaml
+Kubernetes YAML
+Analyzing... TEST_ARTIFACTS/host-net-tp.yaml COUNT: TEST_ARTIFACTS/host-net-tp.yaml36
+get valid taint secrets
+get privileged security contexts
+get insecure HTTP
+ THIS IS HTTP KEY ---->  1
+This is the mapping for the Key 1 ---> None
+get missing security context
+get use of default namespace
+get missing resource limit
+get absent rolling update count
+get absent network policy count
+This is the mapping for the Key spec ---> .spec.template.spec
+ get hostPIDs where True is assigned 
+This is the mapping for the Key hostPID ---> .spec.template.spec.hostPID
+get hostIPCs where True is assigned
+scan for docker sock paths: /var.run/docker.sock
+scan for hostNetwork where True is assigned 
+This is the mapping for the Key hostNetwork ---> .spec.template.spec.hostNetwork
+scan for CAP SYS
+scan for Host Aliases
+scan for allowPrivilegeEscalation
+scan for unconfied seccomp 
+ scan for cap sys module 
+ 
+
+---------------END FILE RUNNING--------------
+-----
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/tp.nsp.dflt.yaml
+Kubernetes YAML
+Analyzing... TEST_ARTIFACTS/tp.nsp.dflt.yaml COUNT: TEST_ARTIFACTS/tp.nsp.dflt.yaml37
+get valid taint secrets
+get privileged security contexts
+get insecure HTTP
+get missing security context
+get use of default namespace
+This is the mapping for the Key namespace ---> .metadata.namespace
+get missing resource limit
+get absent rolling update count
+This is the mapping for the Key spec ---> .spec
+get absent network policy count
+This is the mapping for the Key spec ---> .spec
+ get hostPIDs where True is assigned 
+get hostIPCs where True is assigned
+scan for docker sock paths: /var.run/docker.sock
+scan for hostNetwork where True is assigned 
+scan for CAP SYS
+scan for Host Aliases
+scan for allowPrivilegeEscalation
+scan for unconfied seccomp 
+ scan for cap sys module 
+ 
+
+---------------END FILE RUNNING--------------
+-----
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/gcr.deployment.yaml
+Kubernetes YAML
+Analyzing... TEST_ARTIFACTS/gcr.deployment.yaml COUNT: TEST_ARTIFACTS/gcr.deployment.yaml38
+get valid taint secrets
+get privileged security contexts
+get insecure HTTP
+get missing security context
+get use of default namespace
+get missing resource limit
+get absent rolling update count
+This is the mapping for the Key spec ---> .spec.template.spec
+get absent network policy count
+This is the mapping for the Key spec ---> .spec.template.spec
+ get hostPIDs where True is assigned 
+get hostIPCs where True is assigned
+scan for docker sock paths: /var.run/docker.sock
+scan for hostNetwork where True is assigned 
+scan for CAP SYS
+scan for Host Aliases
+scan for allowPrivilegeEscalation
+scan for unconfied seccomp 
+ scan for cap sys module 
+ 
+
+---------------END FILE RUNNING--------------
+-----
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/deamonset1.yaml
+Kubernetes YAML
+Analyzing... TEST_ARTIFACTS/deamonset1.yaml COUNT: TEST_ARTIFACTS/deamonset1.yaml39
+get valid taint secrets
+get privileged security contexts
+get insecure HTTP
+get missing security context
+get use of default namespace
+get missing resource limit
+get absent rolling update count
+get absent network policy count
+This is the mapping for the Key spec ---> .spec.template.spec
+ get hostPIDs where True is assigned 
+get hostIPCs where True is assigned
+scan for docker sock paths: /var.run/docker.sock
+scan for hostNetwork where True is assigned 
+scan for CAP SYS
+scan for Host Aliases
+scan for allowPrivilegeEscalation
+scan for unconfied seccomp 
+ scan for cap sys module 
+ 
+
+---------------END FILE RUNNING--------------
+-----
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/fp.no.secu.cont.yaml
+Kubernetes YAML
+Analyzing... TEST_ARTIFACTS/fp.no.secu.cont.yaml COUNT: TEST_ARTIFACTS/fp.no.secu.cont.yaml40
+get valid taint secrets
+get privileged security contexts
+get insecure HTTP
+get missing security context
+get use of default namespace
+This is the mapping for the Key namespace ---> .metadata.namespace
+get missing resource limit
+get absent rolling update count
+get absent network policy count
+This is the mapping for the Key spec ---> .spec
+ get hostPIDs where True is assigned 
+get hostIPCs where True is assigned
+scan for docker sock paths: /var.run/docker.sock
+scan for hostNetwork where True is assigned 
+scan for CAP SYS
+scan for Host Aliases
+scan for allowPrivilegeEscalation
+scan for unconfied seccomp 
+ scan for cap sys module 
+ 
+
+---------------END FILE RUNNING--------------
+-----
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/cluster.svc.v.yaml
+Invalid YAML -->  TEST_ARTIFACTS/cluster.svc.v.yaml
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/multi.doc.yaml
+Kubernetes YAML
+Analyzing... TEST_ARTIFACTS/multi.doc.yaml COUNT: TEST_ARTIFACTS/multi.doc.yaml41
+get valid taint secrets
+get privileged security contexts
+This is the mapping for the Key privileged ---> .spec.containers[0].securityContext.privileged
+get insecure HTTP
+ THIS IS HTTP KEY ---->  2
+This is the mapping for the Key 2 ---> None
+ THIS IS HTTP KEY ---->  2
+This is the mapping for the Key 2 ---> None
+get missing security context
+get use of default namespace
+get missing resource limit
+get absent rolling update count
+get absent network policy count
+This is the mapping for the Key spec ---> .spec
+ get hostPIDs where True is assigned 
+get hostIPCs where True is assigned
+scan for docker sock paths: /var.run/docker.sock
+scan for hostNetwork where True is assigned 
+scan for CAP SYS
+scan for Host Aliases
+scan for allowPrivilegeEscalation
+scan for unconfied seccomp 
+ scan for cap sys module 
+ 
+
+---------------END FILE RUNNING--------------
+-----
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/present.varnish.yaml
+Kubernetes YAML
+Analyzing... TEST_ARTIFACTS/present.varnish.yaml COUNT: TEST_ARTIFACTS/present.varnish.yaml42
+get valid taint secrets
+get privileged security contexts
+get insecure HTTP
+get missing security context
+get use of default namespace
+get missing resource limit
+get absent rolling update count
+This is the mapping for the Key spec ---> .spec.template.spec
+get absent network policy count
+This is the mapping for the Key spec ---> .spec.template.spec
+ get hostPIDs where True is assigned 
+get hostIPCs where True is assigned
+scan for docker sock paths: /var.run/docker.sock
+scan for hostNetwork where True is assigned 
+scan for CAP SYS
+scan for Host Aliases
+scan for allowPrivilegeEscalation
+scan for unconfied seccomp 
+ scan for cap sys module 
+ 
+
+---------------END FILE RUNNING--------------
+-----
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/tp.seccomp.unconfined.yaml
+Kubernetes YAML
+Analyzing... TEST_ARTIFACTS/tp.seccomp.unconfined.yaml COUNT: TEST_ARTIFACTS/tp.seccomp.unconfined.yaml43
+get valid taint secrets
+get privileged security contexts
+get insecure HTTP
+get missing security context
+get use of default namespace
+get missing resource limit
+This is the mapping for the Key spec ---> .spec
+get absent rolling update count
+get absent network policy count
+This is the mapping for the Key spec ---> .spec
+ get hostPIDs where True is assigned 
+get hostIPCs where True is assigned
+scan for docker sock paths: /var.run/docker.sock
+scan for hostNetwork where True is assigned 
+scan for CAP SYS
+scan for Host Aliases
+scan for allowPrivilegeEscalation
+scan for unconfied seccomp 
+This is the mapping for the Key Unconfined ---> None
+ scan for cap sys module 
+ 
+
+---------------END FILE RUNNING--------------
+-----
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/host-ipc-pid-true.yaml
+Kubernetes YAML
+Analyzing... TEST_ARTIFACTS/host-ipc-pid-true.yaml COUNT: TEST_ARTIFACTS/host-ipc-pid-true.yaml44
+get valid taint secrets
+get privileged security contexts
+get insecure HTTP
+get missing security context
+This is the mapping for the Key spec ---> .spec
+get use of default namespace
+get missing resource limit
+This is the mapping for the Key spec ---> .spec
+get absent rolling update count
+get absent network policy count
+This is the mapping for the Key spec ---> .spec
+ get hostPIDs where True is assigned 
+This is the mapping for the Key hostPID ---> .spec.hostPID
+get hostIPCs where True is assigned
+This is the mapping for the Key hostIPC ---> .spec.hostIPC
+scan for docker sock paths: /var.run/docker.sock
+scan for hostNetwork where True is assigned 
+scan for CAP SYS
+scan for Host Aliases
+scan for allowPrivilegeEscalation
+scan for unconfied seccomp 
+ scan for cap sys module 
+ 
+
+---------------END FILE RUNNING--------------
+-----
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/fp.no.reso1.yaml
+Kubernetes YAML
+Analyzing... TEST_ARTIFACTS/fp.no.reso1.yaml COUNT: TEST_ARTIFACTS/fp.no.reso1.yaml45
+get valid taint secrets
+get privileged security contexts
+get insecure HTTP
+get missing security context
+get use of default namespace
+get missing resource limit
+get absent rolling update count
+This is the mapping for the Key spec ---> .spec.template.spec
+get absent network policy count
+This is the mapping for the Key spec ---> .spec.template.spec
+ get hostPIDs where True is assigned 
+get hostIPCs where True is assigned
+scan for docker sock paths: /var.run/docker.sock
+scan for hostNetwork where True is assigned 
+scan for CAP SYS
+scan for Host Aliases
+scan for allowPrivilegeEscalation
+scan for unconfied seccomp 
+ scan for cap sys module 
+ 
+
+---------------END FILE RUNNING--------------
+-----
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/nginx.deployment.result.yaml
+Kubernetes YAML
+Analyzing... TEST_ARTIFACTS/nginx.deployment.result.yaml COUNT: TEST_ARTIFACTS/nginx.deployment.result.yaml46
+get valid taint secrets
+get privileged security contexts
+get insecure HTTP
+get missing security context
+get use of default namespace
+This is the mapping for the Key namespace ---> .metadata.namespace
+get missing resource limit
+get absent rolling update count
+get absent network policy count
+This is the mapping for the Key spec ---> .spec.template.spec
+ get hostPIDs where True is assigned 
+get hostIPCs where True is assigned
+scan for docker sock paths: /var.run/docker.sock
+scan for hostNetwork where True is assigned 
+scan for CAP SYS
+scan for Host Aliases
+scan for allowPrivilegeEscalation
+scan for unconfied seccomp 
+ scan for cap sys module 
+ 
+
+---------------END FILE RUNNING--------------
+-----
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/fp.glance.pv.yaml
+Kubernetes YAML
+Analyzing... TEST_ARTIFACTS/fp.glance.pv.yaml COUNT: TEST_ARTIFACTS/fp.glance.pv.yaml47
+get valid taint secrets
+get privileged security contexts
+get insecure HTTP
+get missing security context
+get use of default namespace
+get missing resource limit
+get absent rolling update count
+get absent network policy count
+This is the mapping for the Key spec ---> .spec
+ get hostPIDs where True is assigned 
+get hostIPCs where True is assigned
+scan for docker sock paths: /var.run/docker.sock
+scan for hostNetwork where True is assigned 
+scan for CAP SYS
+scan for Host Aliases
+scan for allowPrivilegeEscalation
+scan for unconfied seccomp 
+ scan for cap sys module 
+ 
+
+---------------END FILE RUNNING--------------
+-----
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/fp.no.reso6.yaml
+Kubernetes YAML
+Analyzing... TEST_ARTIFACTS/fp.no.reso6.yaml COUNT: TEST_ARTIFACTS/fp.no.reso6.yaml48
+get valid taint secrets
+get privileged security contexts
+get insecure HTTP
+ THIS IS HTTP KEY ---->  value
+This is the mapping for the Key value ---> .spec.template.spec.containers[0].env[2].value
+get missing security context
+get use of default namespace
+get missing resource limit
+get absent rolling update count
+This is the mapping for the Key spec ---> .spec
+get absent network policy count
+This is the mapping for the Key spec ---> .spec
+ get hostPIDs where True is assigned 
+get hostIPCs where True is assigned
+scan for docker sock paths: /var.run/docker.sock
+scan for hostNetwork where True is assigned 
+scan for CAP SYS
+scan for Host Aliases
+scan for allowPrivilegeEscalation
+scan for unconfied seccomp 
+ scan for cap sys module 
+ 
+
+---------------END FILE RUNNING--------------
+-----
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/allow.privilege.yaml
+Kubernetes YAML
+Analyzing... TEST_ARTIFACTS/allow.privilege.yaml COUNT: TEST_ARTIFACTS/allow.privilege.yaml49
+get valid taint secrets
+get privileged security contexts
+This is the mapping for the Key privileged ---> .spec.containers[0].securityContext.privileged
+get insecure HTTP
+get missing security context
+get use of default namespace
+get missing resource limit
+This is the mapping for the Key spec ---> .spec
+get absent rolling update count
+get absent network policy count
+This is the mapping for the Key spec ---> .spec
+ get hostPIDs where True is assigned 
+get hostIPCs where True is assigned
+scan for docker sock paths: /var.run/docker.sock
+scan for hostNetwork where True is assigned 
+scan for CAP SYS
+scan for Host Aliases
+scan for allowPrivilegeEscalation
+This is the mapping for the Key allowPrivilegeEscalation ---> .spec.containers[0].securityContext.allowPrivilegeEscalation
+scan for unconfied seccomp 
+ scan for cap sys module 
+ 
+
+---------------END FILE RUNNING--------------
+-----
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/nextcloud.values.yaml
+Invalid YAML -->  TEST_ARTIFACTS/nextcloud.values.yaml
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/fp.no.reso10.yaml
+Kubernetes YAML
+Analyzing... TEST_ARTIFACTS/fp.no.reso10.yaml COUNT: TEST_ARTIFACTS/fp.no.reso10.yaml50
+get valid taint secrets
+get privileged security contexts
+get insecure HTTP
+get missing security context
+get use of default namespace
+get missing resource limit
+get absent rolling update count
+This is the mapping for the Key spec ---> .spec
+get absent network policy count
+This is the mapping for the Key spec ---> .spec
+ get hostPIDs where True is assigned 
+get hostIPCs where True is assigned
+scan for docker sock paths: /var.run/docker.sock
+scan for hostNetwork where True is assigned 
+scan for CAP SYS
+scan for Host Aliases
+scan for allowPrivilegeEscalation
+scan for unconfied seccomp 
+ scan for cap sys module 
+ 
+
+---------------END FILE RUNNING--------------
+-----
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/fp.no.reso7.yaml
+Kubernetes YAML
+Analyzing... TEST_ARTIFACTS/fp.no.reso7.yaml COUNT: TEST_ARTIFACTS/fp.no.reso7.yaml51
+get valid taint secrets
+get privileged security contexts
+get insecure HTTP
+ THIS IS HTTP KEY ---->  value
+This is the mapping for the Key value ---> .spec.template.spec.containers[0].env[4].value
+get missing security context
+get use of default namespace
+get missing resource limit
+get absent rolling update count
+This is the mapping for the Key spec ---> .spec.template.spec
+get absent network policy count
+This is the mapping for the Key spec ---> .spec.template.spec
+ get hostPIDs where True is assigned 
+get hostIPCs where True is assigned
+scan for docker sock paths: /var.run/docker.sock
+scan for hostNetwork where True is assigned 
+scan for CAP SYS
+scan for Host Aliases
+scan for allowPrivilegeEscalation
+scan for unconfied seccomp 
+ scan for cap sys module 
+ 
+
+---------------END FILE RUNNING--------------
+-----
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/tp.host.net2.yaml
+Kubernetes YAML
+Analyzing... TEST_ARTIFACTS/tp.host.net2.yaml COUNT: TEST_ARTIFACTS/tp.host.net2.yaml52
+get valid taint secrets
+get privileged security contexts
+get insecure HTTP
+get missing security context
+get use of default namespace
+get missing resource limit
+get absent rolling update count
+get absent network policy count
+This is the mapping for the Key spec ---> .spec.template.spec
+ get hostPIDs where True is assigned 
+get hostIPCs where True is assigned
+scan for docker sock paths: /var.run/docker.sock
+scan for hostNetwork where True is assigned 
+This is the mapping for the Key hostNetwork ---> .spec.template.spec.hostNetwork
+scan for CAP SYS
+scan for Host Aliases
+scan for allowPrivilegeEscalation
+scan for unconfied seccomp 
+ scan for cap sys module 
+ 
+
+---------------END FILE RUNNING--------------
+-----
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/fp.nspace1.yaml
+Kubernetes YAML
+Analyzing... TEST_ARTIFACTS/fp.nspace1.yaml COUNT: TEST_ARTIFACTS/fp.nspace1.yaml53
+get valid taint secrets
+get privileged security contexts
+get insecure HTTP
+get missing security context
+get use of default namespace
+get missing resource limit
+get absent rolling update count
+This is the mapping for the Key spec ---> .spec
+get absent network policy count
+This is the mapping for the Key spec ---> .spec
+ get hostPIDs where True is assigned 
+get hostIPCs where True is assigned
+scan for docker sock paths: /var.run/docker.sock
+scan for hostNetwork where True is assigned 
+scan for CAP SYS
+scan for Host Aliases
+scan for allowPrivilegeEscalation
+scan for unconfied seccomp 
+ scan for cap sys module 
+ 
+
+---------------END FILE RUNNING--------------
+-----
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/no.kind.yaml
+Invalid YAML -->  TEST_ARTIFACTS/no.kind.yaml
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/absent.default1.yaml
+Kubernetes YAML
+Analyzing... TEST_ARTIFACTS/absent.default1.yaml COUNT: TEST_ARTIFACTS/absent.default1.yaml54
+get valid taint secrets
+get privileged security contexts
+get insecure HTTP
+get missing security context
+get use of default namespace
+This is the mapping for the Key namespace ---> .metadata.namespace
+get missing resource limit
+get absent rolling update count
+get absent network policy count
+ get hostPIDs where True is assigned 
+get hostIPCs where True is assigned
+scan for docker sock paths: /var.run/docker.sock
+scan for hostNetwork where True is assigned 
+scan for CAP SYS
+scan for Host Aliases
+scan for allowPrivilegeEscalation
+scan for unconfied seccomp 
+ scan for cap sys module 
+ 
+
+---------------END FILE RUNNING--------------
+-----
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/roll.present.demo.yaml
+Kubernetes YAML
+Analyzing... TEST_ARTIFACTS/roll.present.demo.yaml COUNT: TEST_ARTIFACTS/roll.present.demo.yaml55
+get valid taint secrets
+get privileged security contexts
+get insecure HTTP
+get missing security context
+get use of default namespace
+get missing resource limit
+get absent rolling update count
+This is the mapping for the Key spec ---> .spec.template.spec
+get absent network policy count
+This is the mapping for the Key spec ---> .spec.template.spec
+ get hostPIDs where True is assigned 
+get hostIPCs where True is assigned
+scan for docker sock paths: /var.run/docker.sock
+scan for hostNetwork where True is assigned 
+scan for CAP SYS
+scan for Host Aliases
+scan for allowPrivilegeEscalation
+scan for unconfied seccomp 
+ scan for cap sys module 
+ 
+
+---------------END FILE RUNNING--------------
+-----
+
+
+--------------- FILE --------------
+	--> TEST_ARTIFACTS/ANOTHER.DOCKERSOCK.yaml
+Kubernetes YAML
+Analyzing... TEST_ARTIFACTS/ANOTHER.DOCKERSOCK.yaml COUNT: TEST_ARTIFACTS/ANOTHER.DOCKERSOCK.yaml56
+get valid taint secrets
+get privileged security contexts
+get insecure HTTP
+get missing security context
+get use of default namespace
+get missing resource limit
+get absent rolling update count
+This is the mapping for the Key spec ---> .spec.template.spec
+get absent network policy count
+This is the mapping for the Key spec ---> .spec.template.spec
+ get hostPIDs where True is assigned 
+get hostIPCs where True is assigned
+scan for docker sock paths: /var.run/docker.sock
+This is the mapping for the Key mountPath ---> .spec.template.spec.containers[0].volumeMounts[1].mountPath
+scan for hostNetwork where True is assigned 
+scan for CAP SYS
+scan for Host Aliases
+scan for allowPrivilegeEscalation
+scan for unconfied seccomp 
+ scan for cap sys module 
+ 
+
+---------------END FILE RUNNING--------------
+-----

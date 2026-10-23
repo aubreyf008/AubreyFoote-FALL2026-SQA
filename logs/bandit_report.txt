@@ -1,0 +1,201 @@
+Run started:2026-10-23 17:55:07.950280+00:00
+
+Test results:
+>> Issue: [B105:hardcoded_password_string] Possible hardcoded password: 'TEST_ARTIFACTS/helm.values.yaml'
+   Severity: Low   Confidence: Medium
+   CWE: CWE-259 (https://cwe.mitre.org/data/definitions/259.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b105_hardcoded_password_string.html
+   Location: ./TEST_CONSTANTS.py:8:22
+7	_test_yaml          = 'TEST_ARTIFACTS/dataimage.airflowimage.manifests.deployment.yaml'
+8	_secret_yaml1       = 'TEST_ARTIFACTS/helm.values.yaml'
+9	_secret_yaml2       = 'TEST_ARTIFACTS/tango.values.yaml'
+
+--------------------------------------------------
+>> Issue: [B105:hardcoded_password_string] Possible hardcoded password: 'TEST_ARTIFACTS/tango.values.yaml'
+   Severity: Low   Confidence: Medium
+   CWE: CWE-259 (https://cwe.mitre.org/data/definitions/259.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b105_hardcoded_password_string.html
+   Location: ./TEST_CONSTANTS.py:9:22
+8	_secret_yaml1       = 'TEST_ARTIFACTS/helm.values.yaml'
+9	_secret_yaml2       = 'TEST_ARTIFACTS/tango.values.yaml'
+10	_secret_yaml3       = 'TEST_ARTIFACTS/charts.values.yaml'
+
+--------------------------------------------------
+>> Issue: [B105:hardcoded_password_string] Possible hardcoded password: 'TEST_ARTIFACTS/charts.values.yaml'
+   Severity: Low   Confidence: Medium
+   CWE: CWE-259 (https://cwe.mitre.org/data/definitions/259.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b105_hardcoded_password_string.html
+   Location: ./TEST_CONSTANTS.py:10:22
+9	_secret_yaml2       = 'TEST_ARTIFACTS/tango.values.yaml'
+10	_secret_yaml3       = 'TEST_ARTIFACTS/charts.values.yaml'
+11	_secret_yaml4       = 'TEST_ARTIFACTS/skampi.values.yaml'
+
+--------------------------------------------------
+>> Issue: [B105:hardcoded_password_string] Possible hardcoded password: 'TEST_ARTIFACTS/skampi.values.yaml'
+   Severity: Low   Confidence: Medium
+   CWE: CWE-259 (https://cwe.mitre.org/data/definitions/259.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b105_hardcoded_password_string.html
+   Location: ./TEST_CONSTANTS.py:11:22
+10	_secret_yaml3       = 'TEST_ARTIFACTS/charts.values.yaml'
+11	_secret_yaml4       = 'TEST_ARTIFACTS/skampi.values.yaml'
+12	_secret_yaml5       = 'TEST_ARTIFACTS/minecraft.values.yaml'
+
+--------------------------------------------------
+>> Issue: [B105:hardcoded_password_string] Possible hardcoded password: 'TEST_ARTIFACTS/minecraft.values.yaml'
+   Severity: Low   Confidence: Medium
+   CWE: CWE-259 (https://cwe.mitre.org/data/definitions/259.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b105_hardcoded_password_string.html
+   Location: ./TEST_CONSTANTS.py:12:22
+11	_secret_yaml4       = 'TEST_ARTIFACTS/skampi.values.yaml'
+12	_secret_yaml5       = 'TEST_ARTIFACTS/minecraft.values.yaml'
+13	_secret_yaml6       = 'TEST_ARTIFACTS/kubecf.values.yaml'
+
+--------------------------------------------------
+>> Issue: [B105:hardcoded_password_string] Possible hardcoded password: 'TEST_ARTIFACTS/kubecf.values.yaml'
+   Severity: Low   Confidence: Medium
+   CWE: CWE-259 (https://cwe.mitre.org/data/definitions/259.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b105_hardcoded_password_string.html
+   Location: ./TEST_CONSTANTS.py:13:22
+12	_secret_yaml5       = 'TEST_ARTIFACTS/minecraft.values.yaml'
+13	_secret_yaml6       = 'TEST_ARTIFACTS/kubecf.values.yaml'
+14	_secret_yaml7       = 'TEST_ARTIFACTS/nextcloud.values.yaml'
+
+--------------------------------------------------
+>> Issue: [B105:hardcoded_password_string] Possible hardcoded password: 'TEST_ARTIFACTS/nextcloud.values.yaml'
+   Severity: Low   Confidence: Medium
+   CWE: CWE-259 (https://cwe.mitre.org/data/definitions/259.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b105_hardcoded_password_string.html
+   Location: ./TEST_CONSTANTS.py:14:22
+13	_secret_yaml6       = 'TEST_ARTIFACTS/kubecf.values.yaml'
+14	_secret_yaml7       = 'TEST_ARTIFACTS/nextcloud.values.yaml'
+15	_secret_yaml8       = 'TEST_ARTIFACTS/keycloak.values.yaml'
+
+--------------------------------------------------
+>> Issue: [B105:hardcoded_password_string] Possible hardcoded password: 'TEST_ARTIFACTS/keycloak.values.yaml'
+   Severity: Low   Confidence: Medium
+   CWE: CWE-259 (https://cwe.mitre.org/data/definitions/259.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b105_hardcoded_password_string.html
+   Location: ./TEST_CONSTANTS.py:15:22
+14	_secret_yaml7       = 'TEST_ARTIFACTS/nextcloud.values.yaml'
+15	_secret_yaml8       = 'TEST_ARTIFACTS/keycloak.values.yaml'
+16	_secret_yaml9       = 'TEST_ARTIFACTS/empty.yml'
+
+--------------------------------------------------
+>> Issue: [B105:hardcoded_password_string] Possible hardcoded password: 'TEST_ARTIFACTS/empty.yml'
+   Severity: Low   Confidence: Medium
+   CWE: CWE-259 (https://cwe.mitre.org/data/definitions/259.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b105_hardcoded_password_string.html
+   Location: ./TEST_CONSTANTS.py:16:22
+15	_secret_yaml8       = 'TEST_ARTIFACTS/keycloak.values.yaml'
+16	_secret_yaml9       = 'TEST_ARTIFACTS/empty.yml'
+17	_secret_yaml10      = 'TEST_ARTIFACTS/kubecf.values.yaml'
+
+--------------------------------------------------
+>> Issue: [B105:hardcoded_password_string] Possible hardcoded password: 'TEST_ARTIFACTS/kubecf.values.yaml'
+   Severity: Low   Confidence: Medium
+   CWE: CWE-259 (https://cwe.mitre.org/data/definitions/259.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b105_hardcoded_password_string.html
+   Location: ./TEST_CONSTANTS.py:17:22
+16	_secret_yaml9       = 'TEST_ARTIFACTS/empty.yml'
+17	_secret_yaml10      = 'TEST_ARTIFACTS/kubecf.values.yaml'
+18	_cert_yaml          = 'TEST_ARTIFACTS/sni.values.yaml'
+
+--------------------------------------------------
+>> Issue: [B105:hardcoded_password_string] Possible hardcoded password: 'TEST_ARTIFACTS/special.secret1.yaml'
+   Severity: Low   Confidence: Medium
+   CWE: CWE-259 (https://cwe.mitre.org/data/definitions/259.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b105_hardcoded_password_string.html
+   Location: ./TEST_CONSTANTS.py:106:22
+105	fp_no_reso_yaml10   = 'TEST_ARTIFACTS/fp.no.reso10.yaml'
+106	special_secret_1    = 'TEST_ARTIFACTS/special.secret1.yaml'
+107	cap_module_script   = 'TEST_ARTIFACTS/cap-module-ostk.yaml'
+
+--------------------------------------------------
+>> Issue: [B105:hardcoded_password_string] Possible hardcoded password: 'Secret'
+   Severity: Low   Confidence: Medium
+   CWE: CWE-259 (https://cwe.mitre.org/data/definitions/259.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b105_hardcoded_password_string.html
+   Location: ./constants.py:81:31
+80	NAMESPACE_KW                 = 'namespace'
+81	SECRET_KW                    = 'Secret'
+82	
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/blacklists/blacklist_calls.html#b311-random
+   Location: ./fuzz.py:304:10
+303	
+304	    rng = random.Random(seed)
+305	    ctx = {'corpus': load_corpus(), 'tmp': tempfile.mkdtemp(prefix='slikube_fuzz_'), 'files': []}
+
+--------------------------------------------------
+>> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
+   Severity: Low   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/blacklists/blacklist_imports.html#b404-import-subprocess
+   Location: ./parser.py:15:0
+14	import re
+15	import subprocess
+16	import os
+
+--------------------------------------------------
+>> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
+   Severity: Low   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b607_start_process_with_partial_path.html
+   Location: ./parser.py:351:25
+350	                logObj.info('running external command: %s', ['yq', yq_parameter, filepath])
+351	                result = subprocess.check_output(["yq", yq_parameter , filepath], universal_newlines=True)
+352	                #result = subprocess.run(["C:/ProgramData/Chocolatey/bin/yq ",yq_parameter, filepath], shell = True, text= True, capture_output= True,cwd= env_PATH ) #env= {'PATH' : env_PATH}
+
+--------------------------------------------------
+>> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
+   Severity: Low   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b603_subprocess_without_shell_equals_true.html
+   Location: ./parser.py:351:25
+350	                logObj.info('running external command: %s', ['yq', yq_parameter, filepath])
+351	                result = subprocess.check_output(["yq", yq_parameter , filepath], universal_newlines=True)
+352	                #result = subprocess.run(["C:/ProgramData/Chocolatey/bin/yq ",yq_parameter, filepath], shell = True, text= True, capture_output= True,cwd= env_PATH ) #env= {'PATH' : env_PATH}
+
+--------------------------------------------------
+>> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
+   Severity: Low   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b607_start_process_with_partial_path.html
+   Location: ./parser.py:368:21
+367	            logObj.info('running external command: %s', ['yq', yq_parameter, filepath])
+368	            result = subprocess.check_output(["yq", yq_parameter , filepath], universal_newlines=True)
+369	                #result = subprocess.run(["C:/ProgramData/Chocolatey/bin/yq ",yq_parameter, filepath], shell = True, text= True, capture_output= True,cwd= env_PATH ) #env= {'PATH' : env_PATH}
+
+--------------------------------------------------
+>> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
+   Severity: Low   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b603_subprocess_without_shell_equals_true.html
+   Location: ./parser.py:368:21
+367	            logObj.info('running external command: %s', ['yq', yq_parameter, filepath])
+368	            result = subprocess.check_output(["yq", yq_parameter , filepath], universal_newlines=True)
+369	                #result = subprocess.run(["C:/ProgramData/Chocolatey/bin/yq ",yq_parameter, filepath], shell = True, text= True, capture_output= True,cwd= env_PATH ) #env= {'PATH' : env_PATH}
+
+--------------------------------------------------
+
+Code scanned:
+	Total lines of code: 2988
+	Total lines skipped (#nosec): 0
+	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0
+		Low: 18
+		Medium: 0
+		High: 0
+	Total issues (by confidence):
+		Undefined: 0
+		Low: 0
+		Medium: 12
+		High: 6
+Files skipped (0):
